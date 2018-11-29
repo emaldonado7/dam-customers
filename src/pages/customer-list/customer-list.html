@@ -1,0 +1,28 @@
+<!--
+  Generated template for the CustomerListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>customer-list</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <button ion-item *ngFor="let customer of customers" (click)="itemSelected(customer)">
+      {{ customer.ContactName }}
+    </button>
+  </ion-list>
+
+  <ion-fab bottom right >
+    <button ion-fab (click)="onNew()" ><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+
+</ion-content>
